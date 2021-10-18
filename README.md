@@ -16,3 +16,10 @@ Here's a brief introduction to what each file in this repository does
 - `script/pred_all_dataset.py`: this script consists of the LSTM model's architecture and training. 5 mircostructure's data has been used to train the model. The script saves the model and plots the evolution of loss with each epoch.
 - `window-lstm-predictions.ipynb`: this notebook consists of the LSTM model's architecture and training with proper explaination for each code block
 - `window-lstm-training.ipynb`: this notebook consists of the plots made for the analysis of the predictions made using this model.
+
+## Running
+The model is completely developed in Tensorflow 2.0 with some helper functions from scipy and scikit-learn. It would be recommended to run it as jupyter notebook for a clear step by step understanding of the work that has been done. To install the required packages, create a virtual environment and simply run
+
+`pip install -r requirements.txt`
+
+then launch a jupyter-notebook.
