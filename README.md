@@ -1,18 +1,9 @@
-# Predicting the Time Dependent Deformation of Dual Phase
+# A Machine Learning-Based Surrogate Modeling Framework for Predicting the History-Dependent Deformation of Dual Phase Microstructures
+# Sarthak Khandelwal, Soudip Basu, Anirban Patra
+# Department of Metallurgical Engineering and Materials Science, Indian Institute of Technology Bombay, Mumbai, India
 
 ## Abstract
-
-Surrogate machine learning models are proposed for modeling the elastic-plastic deforma-
-tion of dual phase microstructures. The deformation is first simulated using a J2 plasticity
-model, whose results form the basis for surrogate model development. A simple Artificial
-Neural Network (ANN) model is applied to make the predictions for von-Mises effective
-stress, stress triaxiality ratio and effective strain. We further test the performance for a
-Long Short Term Memory (LSTM) based Recurrent Neural Network (RNN) and compare
-the results obtained from the two models. For both the approaches, multiple models were
-trained and the one, with least overall error, was used to make the predictions. There
-is a significant increase in the accuracy with the latter model, which has also been used
-to predict the deformation contours in untrained microstructures, as well the aggregate
-stress-strain response and the strain partitioning between the two phases.
+A Machine Learning (ML)-based surrogate modeling framework is developed to predict the heterogeneous deformation behavior of dual phase microstructures. The deformation is first simulated using a dislocation density-based J2 plasticity Finite Element (FE) model, whose results form the basis for surrogate model training and validation. Long Short Term Memory (LSTM)-based ML models, with different architectures, are employed to predict the spatio-temporal evolution of three output variables: effective strain, von Mises effective stress, and the stress triaxiality ratio. Two metrics, the mean average error (MAE) and the coefficient of determination, $R^2$, are used to assess the performance of the models and different architectures. Based on our analysis, the LSTM model is generally found to predict the spatio-temporal deformation fields with reasonable accuracy, even for untrained microstructures with varying microstructural attributes and random instantiations. The LSTM model is also used to predict aggregate properties, such as the stress-strain response and the strain partitioning in the dual phase microstructures.
 
 ## Training
 [LSTM-based RNN](https://github.com/TheFlash98/model_training/blob/master/window-lstm.ipynb): A LSTM-based RNN model capable of predicting the entire evolution of a microstructure by just looking at the microstrcture at 1% strain. Using this model we have predicted three variable, effective strain, vonmises stress and stress triaxiality. The model analysis, predictions and results over different microstructures can be produced using [this](https://github.com/TheFlash98/model_training/blob/master/window-lstm-plot-analysis.ipynb).
