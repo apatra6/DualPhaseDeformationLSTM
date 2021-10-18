@@ -9,3 +9,10 @@ A Machine Learning (ML)-based surrogate modeling framework is developed to predi
 [LSTM-based RNN](https://github.com/TheFlash98/model_training/blob/master/window-lstm.ipynb): A LSTM-based RNN model capable of predicting the microstructure evolution during deformation of dual phase microstructures by just looking at the microstructure after 1% strain. We have predicted three variables using this model: effective strain, effective stress and stress triaxiality ratio. 
 
 The model analysis, predictions and results for different microstructures can be produced using [this](https://github.com/TheFlash98/model_training/blob/master/window-lstm-plot-analysis.ipynb).
+
+Here's a brief introduction to what each file in this repository does
+
+- `script/pred_all_dataset.py`: takes a particular model and makes predictions for all the given microstructures using the model. It stores the results in a separate folder for each microstructure with appropriate names.
+- `script/pred_all_dataset.py`: this script consists of the LSTM model's architecture and training. 5 mircostructure's data has been used to train the model. The script saves the model and plots the evolution of loss with each epoch.
+- `window-lstm-predictions.ipynb`: this notebook consists of the LSTM model's architecture and training with proper explaination for each code block
+- `window-lstm-training.ipynb`: this notebook consists of the plots made for the analysis of the predictions made using this model.
