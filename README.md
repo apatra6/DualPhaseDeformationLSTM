@@ -1,6 +1,6 @@
 # A Machine Learning-Based Surrogate Modeling Framework for Predicting the History-Dependent Deformation of Dual Phase Microstructures
-# Sarthak Khandelwal, Soudip Basu, Anirban Patra
-# Department of Metallurgical Engineering and Materials Science, Indian Institute of Technology Bombay, Mumbai, India
+## Sarthak Khandelwal, Soudip Basu, Anirban Patra
+## Department of Metallurgical Engineering and Materials Science, Indian Institute of Technology Bombay, Mumbai, India
 
 ## Abstract
 A Machine Learning (ML)-based surrogate modeling framework is developed to predict the heterogeneous deformation behavior of dual phase microstructures. The deformation is first simulated using a dislocation density-based J2 plasticity Finite Element (FE) model, whose results form the basis for surrogate model training and validation. Long Short Term Memory (LSTM)-based ML models, with different architectures, are employed to predict the spatio-temporal evolution of three output variables: effective strain, von Mises effective stress, and the stress triaxiality ratio. Two metrics, the mean average error (MAE) and the coefficient of determination, $R^2$, are used to assess the performance of the models and different architectures. Based on our analysis, the LSTM model is generally found to predict the spatio-temporal deformation fields with reasonable accuracy, even for untrained microstructures with varying microstructural attributes and random instantiations. The LSTM model is also used to predict aggregate properties, such as the stress-strain response and the strain partitioning in the dual phase microstructures.
