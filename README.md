@@ -13,7 +13,7 @@ The model analysis, predictions and results for different microstructures can be
 Here's a brief introduction to what each file in this repository does
 
 - `script/pred_all_dataset.py`: takes a particular model and makes predictions for all the given microstructures using the model. It stores the results in a separate folder for each microstructure with appropriate names.
-- `script/pred_all_dataset.py`: this script consists of the LSTM model's architecture and training. 5 mircostructure's data has been used to train the model. The script saves the model and plots the evolution of loss with each epoch.
+- `script/window_lstm.py`: this script consists of the LSTM model's architecture and training. 5 mircostructure's data has been used to train the model. The script saves the model and plots the evolution of loss with each epoch.
 - `window-lstm-predictions.ipynb`: this notebook consists of the LSTM model's architecture and training with proper explaination for each code block
 - `window-lstm-training.ipynb`: this notebook consists of the plots made for the analysis of the predictions made using this model.
 
@@ -22,4 +22,11 @@ The model is completely developed in Tensorflow 2.0 with some helper functions f
 
 `pip install -r requirements.txt`
 
-then launch a jupyter-notebook.
+then launch a jupyter-notebook and open `window-lstm-predictions.ipynb` to start training your model.
+
+## Example
+[This](https://www.dropbox.com/home/DualPhaseDeformation_LSTM_dataset) dropbox folder contains the model trained by us along with data for microstructure 14. Here are details about the different files in the folder 
+
+- `LSTM_model_trained_to_5_datasets.rar`: contains the trained tensforflow model saved using `model.save()` in tensforflow. The model can be loaded and directly used for preditctions through `tf.keras.models.load_model()` function.
+- `microstructure14.csv`: is a csv file containing data extracted by the [data-extraction](https://github.com/apatra6/DualPhaseDeformation_LSTM/tree/master/data-extraction) script. It contains the values of each variable at each timestep for every material point in the microstructure.
+- `microstructure14-out.csv`: is the output file generated at the end of the J2 Plasticity simulation. This file contains the global variable values which are the same for the entire microstrcture at a given timestamp. This file is used for generating stress-strain plots and discretising the data.
