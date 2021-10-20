@@ -25,7 +25,7 @@ The model is completely developed in Tensorflow 2.0 with some helper functions f
 then launch a jupyter-notebook and open `window-lstm-predictions.ipynb` to start training your model.
 
 ## Example
-[This](https://www.dropbox.com/home/DualPhaseDeformation_LSTM_dataset) dropbox folder contains the model trained by us along with data for microstructure 14. Here are details about the different files in the folder 
+[This](https://www.dropbox.com/sh/shqbpp5z5xu84jb/AAC3HdOgx_errnXQaZ1p_LpPa?dl=0) dropbox folder contains the model trained by us along with data for microstructure 14. Here are details about the different files in the folder 
 
 - `LSTM_model_trained_to_5_datasets.rar`: contains the trained tensforflow model saved using `model.save()` in tensforflow. The model can be loaded and directly used for preditctions through `tf.keras.models.load_model()` function.
 - `microstructure14.csv`: is a csv file containing data extracted by the [data-extraction](https://github.com/apatra6/DualPhaseDeformation_LSTM/tree/master/data-extraction) script. It contains the values of each variable at each timestep for every material point in the microstructure.
